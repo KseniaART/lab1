@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script>
+function result(){
+	var sum =0;
+	var num = Number(document.forms["fo"].elements["num"].value);
+	var	per = Number(document.forms["fo"].elements["per"].value);
+	function fac(num){
+	var res = 1;
+	for (var i = 1; i <= num; i++) {
+		res*=i;
+	}
+	return res;
+}
+	for(var i=0; i<=num; i++){
+		sum = sum +(((-1)**i)*per**i)/fac(i);
+	}	
+	document.writeln(sum);
+}
+</script>	
+</head>
+<body>
+<form id="fo">
+Введите число:<br>	
+<input type="text" id="num"> <br>
+Введите x:<br>
+<input type="text" id="per"><br>
+<input type="button" onclick="result()" value="Отправить">
+</form>
+</body>
+</html>
